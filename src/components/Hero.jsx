@@ -4,7 +4,8 @@ import '../styles/font.css'
 import TrueFocus from './ui/TrueFocus/TrueFocus';
 import RotatingText from './ui/RotatingText/RotatingText';
 import Hyperspeed from './ui/Hyperspeed/Hyperspeed';
-import Particles from './ui/Particles/Particles'
+import Particles from './ui/Particles/Particles';
+import '../styles/font.css'
 
 
 const Hero = () => {
@@ -23,11 +24,11 @@ const Hero = () => {
      />
       </div>
 
-      <div className="relative mt-8  flex flex-col items-center  justify-center h-full text-center text-white">
+      <div className="relative mt-8 font-robot  flex flex-col items-center  justify-center h-full text-center text-white">
 
           <span className="text-6xl md:text-8xl font-bold font-saira">
             <TrueFocus 
-              sentence="ASTRAVERSE"
+              sentence="OFFICIALNAME"
               manualMode={true}
               blurAmount={5}
               borderColor="blue"
@@ -36,10 +37,10 @@ const Hero = () => {
               />
           </span>
  
-        <p className="mt-6 text-lg md:text-xl text-gray-200 max-w-2xl">
+        <p className="mt-6 text-lg md:text-lg font-robot text-gray-300 max-w-2xl">
           Showcase Your talent and win exciting prices
         </p>
-        <button className="mt-8 px-8 py-3 bg-cyan-400 text-black font-semibold rounded-full hover:scale-105 transition-transform">
+        <button className="mt-8 px-8 py-3 bg-cyan-400 font-robot text-black font-semibold rounded-full hover:scale-105 transition-transform">
           Explore Events
         </button>
 
@@ -57,6 +58,8 @@ const Hero = () => {
               rotationInterval={4000}
             />
       </div>
+
+      
 
       </div>
 
