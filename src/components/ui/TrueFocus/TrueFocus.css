@@ -9,12 +9,16 @@
 
 .focus-word {
   position: relative;
-  font-size: 3rem;
+  font-size: 3.3rem;
   font-weight: 900;
   cursor: pointer;
   transition:
     filter 0.3s ease,
     color 0.3s ease;
+line-height: 1;
+  padding-right: 0; /* prevent extra internal gap */
+  margin-right: -4px; /* key fix: trims the right bearing */
+  letter-spacing: 0; /* keeps characters tight */
 }
 
 .focus-word.active {

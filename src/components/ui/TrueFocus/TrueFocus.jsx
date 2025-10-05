@@ -31,6 +31,8 @@ const TrueFocus = ({
     }
   }, [manualMode, animationDuration, pauseBetweenAnimations, words.length]);
 
+
+
   useEffect(() => {
     if (currentIndex === null || currentIndex === -1) return;
 
@@ -46,6 +48,8 @@ const TrueFocus = ({
       height: activeRect.height
     });
   }, [currentIndex, words.length]);
+
+  
 
   const handleMouseEnter = index => {
     if (manualMode) {

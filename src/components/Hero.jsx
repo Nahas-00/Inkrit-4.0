@@ -12,15 +12,15 @@ const Hero = () => {
     <section className="relative w-full h-screen overflow-hidden">
       <div className="absolute inset-0">
       <Particles
-    particleColors={['#ffffff', '#ffffff']}
-    particleCount={200}
-    particleSpread={10}
-    speed={0.1}
-    particleBaseSize={100}
-    moveParticlesOnHover={true}
-    alphaParticles={false}
-    disableRotation={false}
-  />
+        particleColors={['#ffffff', '#ffffff']}
+        particleCount={200}
+        particleSpread={10}
+        speed={0.1}
+        particleBaseSize={100}
+        moveParticlesOnHover={true}
+        alphaParticles={false}
+        disableRotation={false}
+     />
       </div>
 
       <div className="relative mt-8  flex flex-col items-center  justify-center h-full text-center text-white">
@@ -28,7 +28,7 @@ const Hero = () => {
           <span className="text-6xl md:text-8xl font-bold font-saira">
             <TrueFocus 
               sentence="ASTRAVERSE"
-              manualMode={false}
+              manualMode={true}
               blurAmount={5}
               borderColor="blue"
               animationDuration={8}
@@ -44,11 +44,8 @@ const Hero = () => {
         </button>
 
          <div className="mt-12 overflow-hidden flex flex-row gap-1">
-          <div>
-            <h1 className="text-lg mt-1.5 font-bold">Date :</h1>
-          </div>
             <RotatingText
-              texts={['January 15 , 16, 17 2026', 'From 10 Am onwards',  'Stay Tuned!']}
+              texts={['Date : January 15 , 16, 17 2026', 'Time : From 10 Am onwards',  'Stay Tuned!']}
               mainClassName="px-2 sm:px-2 md:px-3 bg-cyan-300 text-black overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg "
               staggerFrom={"last"}
               initial={{ y: "100%" }}
@@ -57,7 +54,7 @@ const Hero = () => {
               staggerDuration={0.025}
               splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
               transition={{ type: "spring", damping: 30, stiffness: 400 }}
-              rotationInterval={2000}
+              rotationInterval={4000}
             />
       </div>
 
