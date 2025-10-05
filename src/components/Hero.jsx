@@ -26,9 +26,9 @@ const Hero = () => {
 
       <div className="relative mt-8 font-robot  flex flex-col items-center  justify-center h-full text-center text-white">
 
-          <span className="text-6xl md:text-8xl font-bold font-saira">
+          <span className="text-5xl md:text-8xl font-bold font-saira">
             <TrueFocus 
-              sentence="OFFICIALNAME"
+              sentence="ASTRAVERSE"
               manualMode={true}
               blurAmount={5}
               borderColor="blue"

@@ -15,16 +15,16 @@ import '../styles/font.css'
 
         <ul className="hidden md:flex text-base space-x-8 font-roboto text-gray-300 mr-32">
           <li>
-            <Link to='/events'  className="cursor-pointer transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#ffffffa0]">Home</Link> 
+            <Link to='/'  className="cursor-pointer transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#ffffffa0]">Home</Link> 
           </li>
           <li>
-            <Link to='/events'  className="cursor-pointer transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#ffffffa0]">About Us</Link> 
+            <Link to='/about'  className="cursor-pointer transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#ffffffa0]">About Us</Link> 
           </li>
           <li>
-            <Link to='/events'  className="cursor-pointer transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#ffffffa0]">Events</Link> 
+            <Link to='/'  className="cursor-pointer transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#ffffffa0]">Events</Link> 
           </li>
          <li>
-            <Link to='/events'  className="cursor-pointer transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#ffffffa0]">Sponsors</Link> 
+            <Link to='/'  className="cursor-pointer transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#ffffffa0]">Sponsors</Link> 
           </li>
         </ul>
 
@@ -47,10 +47,18 @@ import '../styles/font.css'
 
         {menuOpen && (
           <ul className="absolute top-[75px] right-10 bg-black/80 backdrop-blur-lg rounded-2xl p-6 flex flex-col items-center space-y-4 text-gray-300 shadow-lg border text-gray-300 border-gray-700 md:hidden">
-            <li className="cursor-pointer hover:text-white transition duration-300">Home</li>
-            <li className="cursor-pointer hover:text-white transition duration-300">About Us</li>
-            <li className="cursor-pointer hover:text-white transition duration-300">Events</li>
-            <li className="cursor-pointer hover:text-white transition duration-300">Sponsors</li>
+            <li >
+              <Link to='/' className="cursor-pointer hover:text-white transition duration-300"></Link> Home
+            </li>
+            <li >
+              <Link to='/about' className="cursor-pointer hover:text-white transition duration-300"></Link> About Us
+            </li>
+            <li >
+              <Link to='/' className="cursor-pointer hover:text-white transition duration-300"></Link> Events
+            </li>
+            <li >
+              <Link to='/' className="cursor-pointer hover:text-white transition duration-300"></Link> Sponsors
+            </li>
           </ul>
         )}
         
