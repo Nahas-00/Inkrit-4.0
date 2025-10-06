@@ -11,11 +11,11 @@ const About = () => {
 
   return (
     <>
-    <Navbar />
-    <div className="p-5 w-full h-auto min-h-screen flex flex-col items-center bg-gray-900 text-white space-y-16">
       
+    <div className="p-5 w-full h-auto min-h-screen flex flex-col items-center bg-gray-900 text-white space-y-16">
+      <Navbar />
       {/* Main Heading */}
-      <h1 className="relative font-poppins mt-3 text-5xl font-bold mb-10 before:content-[''] before:absolute before:left-0 before:-bottom-2 before:h-1 before:w-32 before:bg-purple-500 before:rounded-full">
+      <h1 className="mt-20 relative font-poppins mt-3 text-5xl font-bold mb-10 before:content-[''] before:absolute before:left-0 before:-bottom-2 before:h-1 before:w-32 before:bg-purple-500 before:rounded-full">
         About Us
       </h1>
 
