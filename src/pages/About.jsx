@@ -46,7 +46,7 @@ const About = () => {
       </div>
 
       {/* Masonry Section Below Text */}
-      <div className="w-full max-w-6xl mt-5">
+      <div className="w-full max-w-6xl bg-gray-800 mt-5">
         <Masonry
           items={items}
           ease="power3.out"
