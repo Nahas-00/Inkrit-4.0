@@ -48,16 +48,16 @@ import '../styles/font.css'
         {menuOpen && (
           <ul className="absolute top-[75px] right-10 bg-black/80 backdrop-blur-lg rounded-2xl p-6 flex flex-col items-center space-y-4 text-gray-300 shadow-lg border text-gray-300 border-gray-700 md:hidden">
             <li >
-              <Link to='/' className="cursor-pointer hover:text-white transition duration-300"></Link> Home
+              <Link to='/' className="cursor-pointer hover:text-white transition duration-300">Home</Link> 
             </li>
             <li >
-              <Link to='/about' className="cursor-pointer hover:text-white transition duration-300"></Link> About Us
+              <Link to='/about' className="cursor-pointer hover:text-white transition duration-300">About Us</Link> 
             </li>
             <li >
-              <Link to='/' className="cursor-pointer hover:text-white transition duration-300"></Link> Events
+              <Link to='/' className="cursor-pointer hover:text-white transition duration-300">Events</Link> 
             </li>
             <li >
-              <Link to='/' className="cursor-pointer hover:text-white transition duration-300"></Link> Sponsors
+              <Link to='/' className="cursor-pointer hover:text-white transition duration-300">Sponsors</Link> 
             </li>
           </ul>
         )}

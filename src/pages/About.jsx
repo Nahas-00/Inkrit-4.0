@@ -1,5 +1,6 @@
 import '../styles/style.css';
 import Masonry from '../components/ui/Masonry/Masonry';
+import Navbar from '../components/Navbar'
 
 const About = () => {
   const items = [
@@ -9,6 +10,8 @@ const About = () => {
   ];
 
   return (
+    <>
+    <Navbar />
     <div className="p-5 w-full h-auto min-h-screen flex flex-col items-center bg-gray-900 text-white space-y-16">
       
       {/* Main Heading */}
@@ -59,6 +62,8 @@ const About = () => {
 
 
     </div>
+
+  </>
   )
 }
 
