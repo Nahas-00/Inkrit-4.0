@@ -33,7 +33,7 @@ const Hero = () => {
               liquidRadius={1.2}
               liquidWobbleSpeed={5}
               speed={0.6}
-              edgeFade={0.44}
+              edgeFade={0.1}
               transparent
               
             />
