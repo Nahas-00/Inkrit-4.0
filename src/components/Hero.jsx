@@ -41,7 +41,7 @@ const Hero = () => {
       </div>
 
 
-      <div className="absolute left-7 top-8 z-50 font-bold text-red-400 font-Orbitron lg:text-lg xl:text-xl text-sm md:text-base tracking-widest">
+      <div className="absolute left-7 top-8 z-50 font-bold text-red-500 font-Orbitron lg:text-lg xl:text-xl text-sm md:text-base tracking-widest">
         <p>Mes College <br /> Marampally</p>
       </div>
 
@@ -110,7 +110,7 @@ const Hero = () => {
 
       </div>
 
-       <div className="absolute bottom-0 right-0 w-[300px] h-[300px] md:w-[550px] md:h-[550px] z-0">
+       <div className="absolute bottom-2 right-1 w-[300px] h-[300px] md:w-[550px] md:h-[550px] z-0">
         <Canvas camera={{ position: [0, 0, 5], fov: 45 }}>
           <ambientLight intensity={0.7} />
           <directionalLight position={[2, 2, 3]} intensity={1.5} />
