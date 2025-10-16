@@ -15,8 +15,8 @@ const Hero = () => {
     <section className="relative w-full h-screen overflow-hidden">
 
      
-      <div className="absolute inset-0">
-
+      <div className="absolute inset-0 w-screen h-screen">
+          {typeof window !== "undefined" && window.innerWidth > 768 ? (
            <PixelBlast
               variant="circle"
               pixelSize={6}
@@ -33,10 +33,15 @@ const Hero = () => {
               liquidRadius={1.2}
               liquidWobbleSpeed={5}
               speed={0.6}
-              edgeFade={0.1}
-              transparent
+              edgeFade={0.44}
+              transparent={false}
+              backgroundColor='#000'
               
             />
+
+             ) : (
+    <div className="w-full h-full bg-black" /> // fallback for mobile
+  )}
        
       </div>
 
@@ -110,7 +115,14 @@ const Hero = () => {
 
       </div>
 
-       
+       <div className="absolute bottom-4 right-1 w-[300px] h-[300px] md:w-[550px] md:h-[550px] z-0">
+        <Canvas camera={{ position: [0, 0, 5], fov: 45 }}>
+          <ambientLight intensity={0.7} />
+          <directionalLight position={[2, 2, 3]} intensity={1.5} />
+          <RobotModel />
+          <OrbitControls enableZoom={false} />
+        </Canvas>
+      </div>
 
     </section>
   )
