@@ -1,70 +1,91 @@
-import React , {useState} from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import GlitchText from "./ui/GlitchText/GlitchText";
-import '../styles/font.css'
+import { Home, Calendar, Handshake, Phone } from "lucide-react";
 
-  const Navbar = () => {
-    const [menuOpen , setMenuOpen] = useState(false);
-    return(
-      <nav className="absolute top-0 left-0 w-full flex justify-between items-center mt-3 px-10 py-6 z-20">
-        <h1 className="text-white text-2xl font-robot font-bold tracking-wide ml-8">
-          <GlitchText>
-            Inkrit 4.0
-          </GlitchText>
-        </h1>
+const Navbar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
 
-        <ul className="hidden md:flex text-base space-x-8 font-roboto text-gray-300 mr-32">
-          <li>
-            <Link to='/'  className="cursor-pointer transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#ffffffa0]">Home</Link> 
-          </li>
-          <li>
-            <Link to='/about'  className="cursor-pointer transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#ffffffa0]">About Us</Link> 
-          </li>
-          <li>
-            <Link to='/'  className="cursor-pointer transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#ffffffa0]">Events</Link> 
-          </li>
-         <li>
-            <Link to='/'  className="cursor-pointer transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_#ffffffa0]">Sponsors</Link> 
-          </li>
-        </ul>
+  return (
+    <>
 
+      <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 flex items-center justify-center space-x-3">
+        {/* Left Icons */}
         <div
-          className="md:hidden flex flex-col justify-between w-7 h-5 cursor-pointer mr-8" 
-          onClick={() => setMenuOpen(!menuOpen) }
-          >
-
-            <span 
-              className={`block h-[2px] bg-white transition-transform duration-300 ${ menuOpen ? "rotate-45 translate-y-[9px]" : "" }`}>
-            </span>
-
-            <span
-              className={`block h-[2px] bg-white transition-transform duration-300 ${
-                menuOpen ? "-rotate-45 -translate-y-[9px]" : ""
-              }`}
-            ></span>
-
+          className={`flex items-center space-x-3 transition-all duration-500 ease-in-out ${
+            menuOpen
+              ? "opacity-100 translate-x-0"
+              : "opacity-0 -translate-x-10 pointer-events-none"
+          }`}
+        >
+          {menuOpen && (
+            <>
+              <Link
+                to="/"
+                className="backdrop-blur-md bg-white/10 bg-white/10 hover:bg-red-600
+ p-3 rounded-full text-white shadow-lg transition hover:scale-110"
+              >
+                <Home size={22} />
+              </Link>
+              <Link
+                to="/about"
+                className="backdrop-blur-md bg-white/10 bg-white/10 hover:bg-red-600
+ p-3 rounded-full text-white shadow-lg transition hover:scale-110"
+              >
+                <Calendar size={22} />
+              </Link>
+            </>
+          )}
         </div>
 
-        {menuOpen && (
-          <ul className="absolute top-[75px] right-10 bg-black/80 backdrop-blur-lg rounded-2xl p-6 flex flex-col items-center space-y-4 text-gray-300 shadow-lg border text-gray-300 border-gray-700 md:hidden">
-            <li >
-              <Link to='/' className="cursor-pointer hover:text-white transition duration-300">Home</Link> 
-            </li>
-            <li >
-              <Link to='/about' className="cursor-pointer hover:text-white transition duration-300">About Us</Link> 
-            </li>
-            <li >
-              <Link to='/' className="cursor-pointer hover:text-white transition duration-300">Events</Link> 
-            </li>
-            <li >
-              <Link to='/' className="cursor-pointer hover:text-white transition duration-300">Sponsors</Link> 
-            </li>
-          </ul>
-        )}
-        
+        {/* Floating Red Circle (Hamburger Button) */}
+        <button
+          onClick={() => setMenuOpen(!menuOpen)}
+          className={`relative bg-red-600 hover:bg-red-700 w-14 h-14 rounded-full flex items-center justify-center shadow-xl transition-transform duration-300 ${
+            menuOpen ? "rotate-45" : ""
+          }`}
+        >
+          <span
+            className={`absolute w-6 h-[2px] bg-white transition-all duration-300 ${
+              menuOpen ? "rotate-95" : "-translate-y-2"
+            }`}
+          ></span>
+          <span
+            className={`absolute w-6 h-[2px] bg-white transition-all duration-300 ${
+              menuOpen ? "-rotate-5" : "translate-y-2"
+            }`}
+          ></span>
+        </button>
 
-      </nav>
-    )
-  }
+        {/* Right Icons */}
+        <div
+          className={`flex items-center space-x-3 transition-all duration-500 ease-in-out ${
+            menuOpen
+              ? "opacity-100 translate-x-0"
+              : "opacity-0 translate-x-10 pointer-events-none"
+          }`}
+        >
+          {menuOpen && (
+            <>
+              <Link
+                to="/sponsors"
+                className="backdrop-blur-md bg-white/10 bg-white/10 hover:bg-red-600
+ p-3 rounded-full text-white shadow-lg transition hover:scale-110"
+              >
+                <Handshake size={22} />
+              </Link>
+              <Link
+                to="/contact"
+                className="backdrop-blur-md bg-white/10 bg-white/10 hover:bg-red-600
+ p-3 rounded-full text-white shadow-lg transition hover:scale-110"
+              >
+                <Phone size={22} />
+              </Link>
+            </>
+          )}
+        </div>
+      </div>
+    </>
+  );
+};
 
-  export default Navbar;
+export default Navbar;

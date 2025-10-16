@@ -1,6 +1,10 @@
 @import "tailwindcss";
 
 body{
-   background: radial-gradient(circle at top, #39044e, #0b0012) !important;
+   background: radial-gradient(circle at top, #000000, #0b0012) !important;
+   cursor: crosshair;
+   font-family: 'Orbitron', sans-serif;
 
 }
+
+
