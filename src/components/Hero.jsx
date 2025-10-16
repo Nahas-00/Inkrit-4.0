@@ -110,14 +110,7 @@ const Hero = () => {
 
       </div>
 
-       <div className="absolute bottom-2 right-1 w-[300px] h-[300px] md:w-[550px] md:h-[550px] z-0">
-        <Canvas camera={{ position: [0, 0, 5], fov: 45 }}>
-          <ambientLight intensity={0.7} />
-          <directionalLight position={[2, 2, 3]} intensity={1.5} />
-          <RobotModel />
-          <OrbitControls enableZoom={false} />
-        </Canvas>
-      </div>
+       
 
     </section>
   )
