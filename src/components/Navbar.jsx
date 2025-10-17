@@ -22,14 +22,14 @@ const Navbar = () => {
               <Link
                 to="/"
                 className="backdrop-blur-md bg-white/10 bg-white/10 hover:bg-red-600
- p-3 rounded-full text-white shadow-lg transition hover:scale-110"
+                 p-3 rounded-full text-white shadow-lg transition hover:scale-110"
               >
                 <Home size={22} />
               </Link>
               <Link
                 to="/about"
                 className="backdrop-blur-md bg-white/10 bg-white/10 hover:bg-red-600
- p-3 rounded-full text-white shadow-lg transition hover:scale-110"
+                  p-3 rounded-full text-white shadow-lg transition hover:scale-110"
               >
                 <Calendar size={22} />
               </Link>
@@ -69,14 +69,14 @@ const Navbar = () => {
               <Link
                 to="/sponsors"
                 className="backdrop-blur-md bg-white/10 bg-white/10 hover:bg-red-600
- p-3 rounded-full text-white shadow-lg transition hover:scale-110"
+                  p-3 rounded-full text-white shadow-lg transition hover:scale-110"
               >
                 <Handshake size={22} />
               </Link>
               <Link
                 to="/contact"
                 className="backdrop-blur-md bg-white/10 bg-white/10 hover:bg-red-600
- p-3 rounded-full text-white shadow-lg transition hover:scale-110"
+                  p-3 rounded-full text-white shadow-lg transition hover:scale-110"
               >
                 <Phone size={22} />
               </Link>
