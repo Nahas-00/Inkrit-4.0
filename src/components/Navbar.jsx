@@ -27,7 +27,7 @@ const Navbar = () => {
                 <Home size={22} />
               </Link>
               <Link
-                to="/about"
+                to="/events"
                 className="backdrop-blur-md bg-white/10 bg-white/10 hover:bg-red-600
                   p-3 rounded-full text-white shadow-lg transition hover:scale-110"
               >
