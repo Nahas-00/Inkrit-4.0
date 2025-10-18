@@ -1,9 +1,10 @@
 // src/components/RobotModel.jsx
 import { useGLTF } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
+import React from "react";
 import { useRef } from "react";
 
-export default function RobotModel() {
+ function RobotModel() {
   const { scene } = useGLTF("/robot.glb");
   const ref = useRef();
 
@@ -16,3 +17,6 @@ export default function RobotModel() {
 
   return <primitive ref={ref} object={scene} scale={1.2} />;
 }
+
+
+export default React.memo(RobotModel);

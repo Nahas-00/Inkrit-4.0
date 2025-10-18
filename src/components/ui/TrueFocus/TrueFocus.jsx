@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import React from 'react';
 import { motion } from 'motion/react';
 import './TrueFocus.css';
 
@@ -119,4 +120,4 @@ const TrueFocus = ({
   );
 };
 
-export default TrueFocus;
+export default React.memo(TrueFocus);

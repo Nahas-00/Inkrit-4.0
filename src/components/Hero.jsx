@@ -11,8 +11,8 @@ import Particles from './ui/Particles/Particles';
 import { motion } from "framer-motion";
 import { useMediaQuery } from 'react-responsive';
 import Footer from './Footer'
-import Mes from '../../public/mes-college.jpeg'
-import '../styles/font.css';
+import Mes from '../assets/mes-college.jpeg';
+import '../styles/BackgroundGrid.css';
 
 
 const Hero = () => {
@@ -106,7 +106,7 @@ const Hero = () => {
         <p className="mt-6 text-sm md:text-lg font-robot text-gray-200 shadow-red-100 max-w-2xl">
           Showcase Your talent and win exciting prizes
         </p>
-        <button className="mt-8 px-8 py-3 bg-red-600 font-robot text-gray-200 font-semibold rounded-full hover:scale-105 transition-transform relative neon-btn">
+        <button className="mt-8 px-8 py-3 bg-red-600 font-robot text-gray-200 font-semibold rounded-full hover:scale-105 transition-transform relative neon-btn z-2">
           Explore Events
         </button>
 
@@ -162,7 +162,7 @@ const Hero = () => {
 
     </section>
   
-           <div className="p-8 w-full min-h-screen flex flex-col items-center bg-black text-white space-y-20">
+           <div className="p-8 w-full min-h-screen flex flex-col items-center about-section-grid text-white space-y-20">
 
         {/* Main Heading */}
         <h1 className="mt-16 text-5xl md:text-6xl font-orbitron font-bold text-red-500 relative">
