@@ -1,0 +1,226 @@
+/* src/components/Contact.css */
+
+/* --- Theme Colors and Fonts --- */
+:root {
+  --primary-color: #ff003c;
+  --background-color: #0a0a0a;
+  --card-background: #1a1a1a;
+  --text-color: #f0f0f0;
+  --glow-color: rgba(255, 0, 60, 0.6);
+  --border-color: rgba(255, 0, 60, 0.2);
+  --font-orbitron: 'Orbitron', sans-serif;
+  --font-roboto: 'Roboto', sans-serif;
+}
+
+/* --- Main Section Styling --- */
+.contact-section {
+  background-color: var(--background-color);
+  font-family: var(--font-roboto);
+  color: var(--text-color);
+  padding: 4rem 1rem;
+}
+
+.contact-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 0 30px var(--glow-color);
+  /* The futuristic grid background */
+  background-image:
+    linear-gradient(var(--border-color) 1px, transparent 1px),
+    linear-gradient(90deg, var(--border-color) 1px, transparent 1px);
+  background-size: 25px 25px;
+}
+
+/* --- Titles --- */
+.main-title {
+  font-family: var(--font-orbitron);
+  font-size: 3rem;
+  text-align: center;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  margin-bottom: 3rem;
+  /* Flicker animation for the glow */
+  animation: text-flicker 3s linear infinite;
+}
+
+.sub-section-title {
+  font-family: var(--font-orbitron);
+  color: var(--text-color);
+  font-size: 1.8rem;
+  text-align: center;
+  margin-top: 2.5rem;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid var(--primary-color);
+  display: inline-block;
+  padding-bottom: 0.5rem;
+  /* To center the inline-block title */
+  display: block;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* --- Keyframe Animation for the Title Glow --- */
+@keyframes text-flicker {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    text-shadow:
+      0 0 5px var(--primary-color),
+      0 0 10px var(--primary-color),
+      0 0 20px var(--primary-color),
+      0 0 40px var(--glow-color),
+      0 0 80px var(--glow-color);
+  }
+  20%, 24%, 55% { text-shadow: none; }
+}
+
+/* --- Coordinator Cards --- */
+.coordinators-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.coordinator-card {
+  background: var(--card-background);
+  border: 1px solid var(--border-color);
+  padding: 1.5rem;
+  text-align: center;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%);
+}
+
+.coordinator-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 25px var(--glow-color);
+  border-color: var(--primary-color);
+}
+
+.coordinator-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid var(--primary-color);
+  object-fit: cover;
+  margin: 0 auto 1rem;
+  box-shadow: 0 0 15px var(--glow-color);
+}
+
+.coordinator-card h3 {
+  margin: 0.5rem 0;
+  font-family: var(--font-orbitron);
+  font-size: 1.25rem;
+  color: var(--text-color);
+}
+
+.coordinator-card p {
+  color: #aaa;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.contact-links {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.contact-links a {
+  color: var(--text-color);
+  font-size: 1.5rem;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.contact-links a:hover {
+  color: var(--primary-color);
+  text-shadow: 0 0 10px var(--glow-color);
+}
+
+/* --- Location and Socials --- */
+.location-socials-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  align-items: center;
+  margin-top: 4rem;
+}
+
+.map-wrapper {
+  border: 2px solid var(--primary-color);
+  padding: 5px;
+  box-shadow: 0 0 20px var(--glow-color);
+  background: var(--background-color);
+}
+
+.map-wrapper iframe {
+  width: 100%;
+  height: 350px;
+  border: 0;
+  filter: grayscale(1) invert(0.9) contrast(0.9);
+}
+
+.address {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.socials-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.social-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.social-icons a {
+  color: var(--text-color);
+  font-size: 2.5rem;
+  border: 2px solid var(--border-color);
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  border-color: var(--primary-color);
+  box-shadow: 0 0 20px var(--glow-color);
+  transform: scale(1.1) rotate(5deg);
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 900px) {
+  .location-socials-grid {
+    grid-template-columns: 1fr;
+  }
+  .socials-container {
+    margin-top: 2rem;
+  }
+  .social-icons {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .main-title {
+    font-size: 2.2rem;
+  }
+  .contact-container {
+    padding: 1rem;
+  }
+}

@@ -1,14 +1,10 @@
 import React from "react";
-import { Canvas } from '@react-three/fiber';
-import { OrbitControls, Environment } from '@react-three/drei';
 import '../styles/font.css'
 import TrueFocus from './ui/TrueFocus/TrueFocus';
 import RotatingText from './ui/RotatingText/RotatingText';
 import Shuffle from "./ui/Shuffle/Shuffle";
-import RobotModel from './RobotModel'
 import PixelBlast from './ui/PixelBlast/PixelBlast';
 import Particles from './ui/Particles/Particles';
-import { motion } from "framer-motion";
 import { useMediaQuery } from 'react-responsive';
 import Footer from './Footer'
 import Mes from '../assets/mes-college.jpeg';
@@ -188,9 +184,8 @@ const Hero = () => {
         {/* Masonry Section */}
         
 
-        <Footer />
-
       </div>
+      <Footer />
   </>
   )
 }
