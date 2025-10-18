@@ -130,34 +130,7 @@ const Hero = () => {
 
       </div>
 
-       <motion.div
-          className="absolute bottom-7 left-30 w-[340px] h-[340px] md:bottom-8 md:right-8 md:left-auto md:w-[600px] md:h-[600px] z-0"
-          initial={{ x: "100%", opacity: 0 }}
-          animate={{
-            x: ["100%", "0%", "0%", "100%"],
-            opacity: [0, 1, 1, 0],
-          }}
-          transition={{
-            duration: 24, // total animation time
-            times: [0, 0.125, 0.65, 0.9], 
-            // Explanation:
-            // 0 → start (offscreen)
-            // 0.125 (3s/24s) → fully in
-            // 0.75 (18s/24s) → stay
-            // 1 (24s) → exit
-            ease: "easeInOut",
-            repeat: Infinity,
-            repeatDelay: 3, // delay before repeating
-          }}
-        >
-  <Canvas camera={{ position: [0, 0, 5], fov: 45 }}>
-    <ambientLight intensity={0.7} />
-    <directionalLight position={[2, 2, 3]} intensity={1.5} />
-    <RobotModel />
-    <OrbitControls enableZoom={false} />
-  </Canvas>
-</motion.div>
-
+       
 
 
     </section>

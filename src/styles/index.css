@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 body{
-   background: radial-gradient(circle at top, #000000, #0b0012) !important;
+   background: radial-gradient(circle at top, #000000, #000000) !important;
    cursor: crosshair;
    font-family: 'Exo 2', sans-serif;
 
