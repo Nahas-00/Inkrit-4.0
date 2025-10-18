@@ -39,7 +39,7 @@ const Hero = () => {
               />
             )}
 
-           <PixelBlast
+          {!isMobile && <PixelBlast
               variant="circle"
               pixelSize={6}
               color="#ff0000"
@@ -57,7 +57,7 @@ const Hero = () => {
               speed={0.6}
               edgeFade={0.44}
               transparent
-            />
+            />}
       </div>
 
 
