@@ -9,6 +9,7 @@ import { useMediaQuery } from 'react-responsive';
 import Footer from './Footer'
 import Mes from '../assets/mes-college.jpeg';
 import '../styles/BackgroundGrid.css';
+import logo from '../../public/logo.png';
 
 
 const Hero = () => {
@@ -57,9 +58,19 @@ const Hero = () => {
       </div>
 
 
-      <div className="absolute left-7 top-8 z-50 font-bold text-red-500 font-Orbitron lg:text-lg xl:text-xl text-sm md:text-base tracking-widest">
+      <div className="absolute top-6 right-8  z-50 flex flex-row font-bold text-red-500 font-Orbitron lg:text-lg xl:text-xl text-sm md:text-base tracking-widest">
         <p>Mes College <br /> Marampally</p>
       </div>
+      
+ 
+      <div className="absolute left-7 top-6 z-50">
+        <img 
+          src={logo} 
+          alt="Logo" 
+          className="w-16 md:w-20 lg:w-24 object-contain hover:scale-105 transition-transform duration-300"
+        />
+      </div>
+
 
       <div className="relative font-robot  flex flex-col items-center  justify-center h-full text-center text-white">
           <div className="text-xs sm:text-sm md:text-base tracking-[0.25em] uppercase text-gray-300 font-poppins mb-1">
