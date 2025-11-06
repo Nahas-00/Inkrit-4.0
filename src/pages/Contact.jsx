@@ -9,12 +9,12 @@ import '../styles/Contact.css';
 
 const facultyCoordinators = [
   { name: "Dr. Joseph Deril", title: "Head of Department, C.S.", email: "a@a.com", phone: "+918281656561", imageUrl: Profile },
-  { name: "Ms. Selin M", title: "Associate Professor", email: "a@a.com", phone: "+919446791297", imageUrl: Profile }
+  { name: "Ms. Selin M", title: "Assistant Professor", email: "a@a.com", phone: "+919446791297", imageUrl: Profile }
 ];
 
 const studentCoordinators = [
   { name: "Muhammad Nahas P S", title: "Event Organizer", email: "nahas1021@gmail.com", phone: "++917736038034", imageUrl:Profile},
-  { name: "Amir Ali Abdullha", title: "Sponsorship Head", email: "a@a.com", phone: "+918590013475", imageUrl:Profile },
+  { name: "Amir Ali Abdullha", title: "Event Organizer", email: "a@a.com", phone: "+918590013475", imageUrl:Profile },
 ];
 
 
