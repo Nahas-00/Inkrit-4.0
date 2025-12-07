@@ -5,6 +5,7 @@ import { FiPhone } from "react-icons/fi";
 import Footer from '../components/Footer';
 import Profile from '../assets/no-profile.jpg';
 import nahas from '../assets/profile/nahas.png';
+import amir from '../assets/profile/amir.jpeg'
 import Navbar from '../components/Navbar';
 import '../styles/Contact.css'; 
 
@@ -15,7 +16,7 @@ const facultyCoordinators = [
 
 const studentCoordinators = [
   { name: "Muhammad Nahas P S", title: "Event Organizer", email: "nahas1021@gmail.com", phone: "++917736038034", imageUrl:nahas},
-  { name: "Amir Ali Abdullha", title: "Event Organizer", email: "a@a.com", phone: "+918590013475", imageUrl:Profile },
+  { name: "Amir Ali Abdullha", title: "Event Organizer", email: "a@a.com", phone: "+918590013475", imageUrl:amir },
 ];
 
 
