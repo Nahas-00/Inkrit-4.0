@@ -1,0 +1,47 @@
+/* Sponsors.css Updates */
+
+/* 1. Neon Pulse for High Tiers */
+@keyframes neon-pulse {
+  0%, 100% { box-shadow: 0 0 20px rgba(220, 38, 38, 0.2), inset 0 0 10px rgba(220, 38, 38, 0.1); }
+  50% { box-shadow: 0 0 40px rgba(220, 38, 38, 0.4), inset 0 0 20px rgba(220, 38, 38, 0.2); }
+}
+
+.monolith-card {
+  background: rgba(10, 10, 10, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(220, 38, 38, 0.3);
+  animation: neon-pulse 4s infinite ease-in-out;
+}
+
+/* 2. Glass-Dark Shader */
+.glass-panel {
+  background: linear-gradient(135deg, rgba(20, 20, 20, 0.9) 0%, rgba(5, 5, 5, 0.95) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* 3. Infinite Logo Scroller */
+.scroller-inner {
+  display: flex;
+  gap: 4rem;
+  width: max-content;
+  animation: scroll-left 30s linear infinite;
+}
+
+@keyframes scroll-left {
+  to { transform: translateX(-50%); }
+}
+
+/* 4. Text Glitch */
+.glitch-reveal {
+  text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
+               -0.025em -0.05em 0 rgba(0, 255, 0, 0.75),
+               0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+  animation: glitch 500ms infinite;
+}
+
+@keyframes glitch {
+  0% { text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75); }
+  15% { text-shadow: -0.05em -0.025em 0 rgba(0, 255, 0, 0.75); }
+  /* ... more keyframes for jitters ... */
+}

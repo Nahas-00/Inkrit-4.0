@@ -1,0 +1,59 @@
+/* Futuristic Clipped Corner for Headliner Cards */
+.cyber-clip {
+  clip-path: polygon(
+    0 0, 
+    100% 0, 
+    100% 80%, 
+    95% 100%, 
+    0 100%
+  );
+}
+
+/* Subtle Sci-fi Grid */
+.bg-grid-pattern {
+  background-image: 
+    linear-gradient(rgba(30, 30, 30, 0.5) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(30, 30, 30, 0.5) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+/* Animation for switching tabs */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* Custom Scrollbar for the modal content */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #0F0F0F; 
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #333; 
+  border-radius: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #ef4444; 
+}
+
+/* Modal Animation */
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-modalSlideIn {
+  animation: modalSlideIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
