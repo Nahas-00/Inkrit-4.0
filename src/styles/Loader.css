@@ -1,29 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;900&family=Rajdhani:wght@500;700&display=swap');
+
+:root {
+  --primary: #ff003c; /* Neon Red */
+  --secondary: #1a1a1a;
+  --bg: #050505;
+  --text: #ffffff;
+}
+
+/* --- CONTAINER & BACKGROUND --- */
 .loader-container {
   position: fixed;
   top: 0;
   left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--bg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  overflow: hidden;
+  font-family: 'Rajdhani', sans-serif;
+  perspective: 1000px; /* For 3D effects */
+}
+
+/* 3D Grid Floor Effect */
+.loader-grid {
+  position: absolute;
+  bottom: -20%;
+  left: -50%;
+  width: 200%;
+  height: 100%;
+  background-image: 
+    linear-gradient(var(--primary) 1px, transparent 1px),
+    linear-gradient(90deg, var(--primary) 1px, transparent 1px);
+  background-size: 40px 40px;
+  background-position: center bottom;
+  opacity: 0.15;
+  transform: rotateX(60deg);
+  animation: gridMove 2s infinite linear;
+  mask-image: linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 50%);
+  pointer-events: none;
+}
+
+@keyframes gridMove {
+  0% { transform: rotateX(60deg) translateY(0); }
+  100% { transform: rotateX(60deg) translateY(40px); }
+}
+
+/* --- MAIN GLITCH TEXT --- */
+.glitch-wrapper {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.loader-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 5rem;
+  font-weight: 900;
+  color: var(--text);
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  position: relative;
+  margin: 0;
+  padding: 0 20px;
+  /* Red Glow */
+  text-shadow: 0 0 20px rgba(255, 0, 60, 0.6);
+}
+
+/* The Glitch Layers (Pseudo-elements) */
+.loader-title::before,
+.loader-title::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle at center, #3c0a98, #500497);
+  background: var(--bg);
+}
+
+.loader-title::before {
+  left: 2px;
+  text-shadow: -2px 0 #ff00c1;
+  clip: rect(44px, 450px, 56px, 0);
+  animation: glitch-anim 5s infinite linear alternate-reverse;
+}
+
+.loader-title::after {
+  left: -2px;
+  text-shadow: -2px 0 #00fff9;
+  clip: rect(44px, 450px, 56px, 0);
+  animation: glitch-anim2 5s infinite linear alternate-reverse;
+}
+
+/* --- DECORATIVE HUD ELEMENTS --- */
+.bracket {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border: 2px solid var(--primary);
+  opacity: 0.6;
+  transition: all 0.5s ease;
+}
+
+.bracket-tl { top: 30%; left: 20%; border-right: none; border-bottom: none; }
+.bracket-br { bottom: 30%; right: 20%; border-left: none; border-top: none; }
+
+/* --- LOADING BAR --- */
+.loading-data {
+  width: 300px;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 9999;
-  transition: opacity 1s ease, visibility 1s ease;
+  flex-direction: column;
+  gap: 5px;
 }
 
-.fade-out {
-  opacity: 0;
-  visibility: hidden;
+.progress-text {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Share Tech Mono', monospace;
+  color: var(--primary);
+  font-size: 0.9rem;
 }
 
-.loader-text {
-  font-family: "Saira Stencil One", sans-serif;
-  font-size: 1.8rem;
-  color: white;
-  background-size: 200%;
-  animation: glow 2s ease-in-out infinite, gradientShift 3s linear infinite;
-  letter-spacing: 4px;
-  text-transform: uppercase;
+.bar-wrapper {
+  width: 100%;
+  height: 6px;
+  background: #333;
+  position: relative;
+  overflow: hidden;
 }
 
+.bar-fill {
+  height: 100%;
+  background: var(--primary);
+  box-shadow: 0 0 15px var(--primary);
+  width: 0%;
+  transition: width 0.1s ease;
+}
+
+/* --- ANIMATIONS --- */
+@keyframes glitch-anim {
+  0% { clip: rect(10px, 9999px, 30px, 0); transform: skew(0.5deg); }
+  5% { clip: rect(70px, 9999px, 80px, 0); transform: skew(0.5deg); }
+  10% { clip: rect(20px, 9999px, 60px, 0); transform: skew(0.5deg); }
+  100% { clip: rect(10px, 9999px, 30px, 0); transform: skew(0.5deg); }
+}
+
+@keyframes glitch-anim2 {
+  0% { clip: rect(60px, 9999px, 70px, 0); transform: skew(0.5deg); }
+  5% { clip: rect(10px, 9999px, 20px, 0); transform: skew(0.5deg); }
+  100% { clip: rect(30px, 9999px, 40px, 0); transform: skew(0.5deg); }
+}
+
+/* TV SHUTDOWN EFFECT */
+.tv-shutdown {
+  animation: turnOff 0.6s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+
+@keyframes turnOff {
+  0% { transform: scale(1, 1); opacity: 1; filter: brightness(1); }
+  40% { transform: scale(1, 0.002); opacity: 1; filter: brightness(2); }
+  80% { transform: scale(0, 0.002); opacity: 0.5; }
+  100% { transform: scale(0, 0); opacity: 0; }
+}
