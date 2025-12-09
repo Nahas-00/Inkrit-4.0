@@ -20,12 +20,12 @@ const Events = () => {
   const allEvents = {
     // HEADLINERS
     1: { 
-      id: 1, title: "HACKATHON", subtitle: "24H CODING SPRINT", date: "Jan 16-17", time: "10:00 AM Start", location: "Main Auditorium", 
+      id: 1, title: "HACKATHON", subtitle: "24H CODING SPRINT", date: "Jan 16-17", time: "10:00 AM Start", location: "Silver Jubilee Hall", 
       image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070&auto=format&fit=crop", 
       icon: <Terminal size={32} />, category: "Flagship",
       description: "The ultimate test of endurance and logic. You have 24 hours to build a solution that changes the future. Free food, endless coffee, and glory await.",
       rules: ["Max 4 members per team.", "Bring your own laptops and chargers.", "AI tools allowed but must be disclosed.", "Code must be pushed to GitHub repository."],
-      prize: "₹ 50,000",
+      prize: "₹ 20,000",
       contact: [{ name: "Adithya", phone: "9876543210" }, { name: "Rahul", phone: "9123456780" }],
       regFee: "₹ 500 / Team"
     },
@@ -41,19 +41,18 @@ const Events = () => {
     },
     // TECHNICAL
     101: { 
-      id: 101, title: "Web Weavers", date: "Jan 16", time: "10:00 AM", location: "Computer Lab 2", 
+      id: 101, title: "Css Battle", date: "Jan 16", time: "1:00 PM", location: "Computer Lab", 
       image: "https://images.unsplash.com/photo-1547658719-da2b51169166?q=80&w=1964&auto=format&fit=crop", 
       icon: <Layers />, desc: "Craft the best UI/UX in 3 hours.", category: "Technical",
       description: "A frontend design challenge where aesthetics meet functionality. Replicate the given design or create a new one based on a theme.",
       rules: ["Individual participation.", "Internet access allowed for assets only.", "Submission format: HTML/CSS/JS zip."],
       prize: "₹ 5,000",
       contact: [{ name: "Arjun", phone: "7776665554" }],
-      regFee: "₹ 150"
+      regFee: "₹ 200"
     },
-    // ... Add similar detailed data for other IDs (102, 103, 104, 201, 202, etc.) ...
-    // Placeholder for demo purposes:
-    102: { id: 102, title: "Bug Bounty", subtitle:"Coding competition" ,date: "Jan 16", time: "2 PM", location: "Lab 3", image: "https://images.unsplash.com/photo-1614064641938-3eeb5218fe84?q=80&w=1974", icon: <Zap />, desc: "Find flaws, secure the bag.", prize: "₹ 3,000", rules: ["Find hidden flags."], contact: [{name: "Dev", phone: "123"}], regFee: "₹ 100" },
-    103: { id: 103, title: "Robo Soccer", date: "Jan 17", time: "9 AM", location: "Quadrangle", image: "https://images.unsplash.com/photo-1561144257-e32e8efc6c4f?q=80&w=2070", icon: <Cpu />, desc: "Mechanical athletes.", prize: "₹ 8,000", rules: ["Bots < 5kg."], contact: [{name: "Manu", phone: "123"}], regFee: "₹ 300" },
+    
+    102: { id: 102, title: "Capture The Flag", subtitle:"Coding competition" ,date: "Jan 16", time: "2 PM", location: "Lab 3", image: "https://images.unsplash.com/photo-1614064641938-3eeb5218fe84?q=80&w=1974", icon: <Zap />, desc: "Find flaws, secure the bag.", prize: "₹ 3,000", rules: ["Find hidden flags."], contact: [{name: "Dev", phone: "123"}], regFee: "₹ 100" },
+    103: { id: 103, title: "Coding", date: "Jan 16", time: "9 AM", location: "Quadrangle", image: "https://images.unsplash.com/photo-1561144257-e32e8efc6c4f?q=80&w=2070", icon: <Cpu />, desc: "Mechanical athletes.", prize: "₹ 8,000", rules: ["Bots < 5kg."], contact: [{name: "Manu", phone: "123"}], regFee: "₹ 300" },
     104: { id: 104, title: "Quiz Tech", date: "Jan 17", time: "11 AM", location: "Seminar Hall", image: "https://images.unsplash.com/photo-1606326608606-aa0b62935f2b?q=80&w=2070", icon: <Terminal />, desc: "IT Knowledge test.", prize: "₹ 4,000", rules: ["Teams of 2."], contact: [{name: "Riya", phone: "123"}], regFee: "₹ 200" },
     201: { id: 201, title: "Valorant", date: "Jan 16", time: "9 AM", location: "Gaming Zone", image: "https://images.unsplash.com/photo-1624138784614-87fd1b6528f8?q=80&w=1933", icon: <Gamepad2 />, desc: "5v5 Shooter.", prize: "₹ 10,000", rules: ["Bring own peripherals."], contact: [{name: "Tom", phone: "123"}], regFee: "₹ 500" },
     202: { id: 202, title: "Shutter Up", date: "Jan 16", time: "All Day", location: "Campus", image: "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=1964", icon: <Camera />, desc: "Photography.", prize: "₹ 4,000", rules: ["No editing."], contact: [{name: "Sam", phone: "123"}], regFee: "₹ 150" },
@@ -69,6 +68,8 @@ const Events = () => {
     <div className="min-h-screen bg-black text-white font-sans selection:bg-red-600 selection:text-white pb-24 overflow-x-hidden">
       <Navbar />
       <div className="fixed inset-0 bg-grid-pattern opacity-20 pointer-events-none"></div>
+
+      <div className='bg-red-500 p-2 text-center text-2xl'>Events are not updated.Will update Soon</div>
 
       <div className="relative z-10 container mx-auto px-4 pt-24">
         
