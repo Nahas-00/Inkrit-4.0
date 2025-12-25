@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Navbar from '../components/Navbar'; 
 import { Terminal, Mic2, Cpu, Camera, Gamepad2, ArrowUpRight, Calendar, Zap, Layers, Music, Video, MapPin, Clock, Trophy, User, X, CheckCircle2 } from 'lucide-react';
 import '../styles/Events.css'; 
+import dance from '../assets/dance.jpg';
 
 const Events = () => {
   const [activeTab, setActiveTab] = useState('technical');
@@ -24,44 +25,53 @@ const Events = () => {
       image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070&auto=format&fit=crop", 
       icon: <Terminal size={32} />, category: "Flagship",
       description: "The ultimate test of endurance and logic. You have 24 hours to build a solution that changes the future. Free food, endless coffee, and glory await.",
-      rules: ["Max 4 members per team.", "Bring your own laptops and chargers.", "AI tools allowed but must be disclosed.", "Code must be pushed to GitHub repository."],
+      rules: ["Team should be of 2-4 members.", "Bring your own laptops and chargers.", "Participants will be given a set of problem statements from which they are required to select one statement and build a hardware/ software prototype.", "Hackaton will be conducted in two rounds where in the first round participants should submit an abstract on their product and for the second round the participants are required to submit their final product along with a presentation","WIFI and Restroom Facilities will be provided."," Participants are required to submit the abstract and an evaluation will be conducted .","Only the first 20 registered teams will be accepted. Please register early to secure your spot."],
       prize: "₹ 20,000",
-      contact: [{ name: "Adithya", phone: "9876543210" }, { name: "Rahul", phone: "9123456780" }],
+      contact: [{ name: "Safa", phone: "9895344188" }, { name: "Nadiya", phone: "9207511320" }],
       regFee: "₹ 500 / Team"
     },
     2: { 
-      id: 2, title: "BATTLE OF BANDS", subtitle: "LIVE MUSIC CLASH", date: "Jan 17", time: "06:00 PM", location: "Open Air Stage", 
+      id: 2, title: "BATTLE OF BANDS", subtitle: "LIVE MUSIC CLASH", date: "Jan 17", time: "02:00 PM", location: "Auditorium", 
       image: "https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?q=80&w=2070&auto=format&fit=crop", 
       icon: <Mic2 size={32} />, category: "Flagship",
-      description: "Plug in and amplify. We are looking for the best college band in the state. 15 minutes to prove you own the stage.",
-      rules: ["Time limit: 15 mins (including sound check).", "Original compositions get bonus points.", "Obscenity leads to disqualification."],
-      prize: "₹ 30,000",
-      contact: [{ name: "Sneha", phone: "8887776665" }],
-      regFee: "₹ 1000 / Band"
+      description: "Plug in and amplify. We are looking for the best college band in the state. 20 minutes to prove you own the stage.",
+      rules: ["Time limit: 20 mins (including sound check).", "Original compositions get bonus points.", "Registration closes on 15th Jan 2026","Obscenity leads to disqualification.","Only first 4 Registered teams will be selected.","Atleast 3 teams from 3 different college should be registered in order to conduct the program otherwise event will be cancelled.","Participants must carry their own equipments."],
+      prize: "₹ 20,000",
+      contact: [{ name: "Febin", phone: "6238311020" },{ name: "Vinayak" , phone: "7994010860"}],
+      regFee: "₹ 400 / Band"
+    },
+    3: { 
+      id: 2, title: "EXPO", subtitle: "LIVE Exhibition", date: "Jan 16", time: "11:00 AM", location: "Auditorium", 
+      image: "https://images.unsplash.com/photo-1761195696590-3490ea770aa1?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?q=80&w=2070&auto=format&fit=crop", 
+      icon: <Mic2 size={32} />, category: "Flagship",
+      description: "Plug in and amplify. We are looking for the best college band in the state. 20 minutes to prove you own the stage.",
+      rules: [ "Exhibition Hours: 11:00 AM to 5:00 PM (Teams must remain at their booths for the duration , break will be provided).", "Team size: Minimum 2 and maximum 5 members per group.", "Registration closes on 15th Jan 2026.", "Maximum Capacity: Only the first 30 registered groups will be accepted.", "Atleast 3 teams from 3 different colleges should be registered in order to conduct the program otherwise event will be cancelled.", "Original innovations and hardware prototypes get bonus points.", "Plagiarism, safety violations, or unethical behavior leads to disqualification.", "Participants must carry their own equipment, including laptops, power strips, and display materials.", ],
+      prize: "₹ 10,000",
+      contact: [{ name: "Arun", phone: "62878311020" },{ name: "Surya" , phone: "576878878"}],
+      regFee: "Free"
     },
     // TECHNICAL
     101: { 
-      id: 101, title: "Css Battle", date: "Jan 16", time: "1:00 PM", location: "Computer Lab", 
+      id: 101, title: "Css Battle", date: "Jan 16", time: "2:00 PM", location: "Msc Lab", 
       image: "https://images.unsplash.com/photo-1547658719-da2b51169166?q=80&w=1964&auto=format&fit=crop", 
       icon: <Layers />, desc: "Craft the best UI/UX in 3 hours.", category: "Technical",
       description: "A frontend design challenge where aesthetics meet functionality. Replicate the given design or create a new one based on a theme.",
-      rules: ["Individual participation.", "Internet access allowed for assets only.", "Submission format: HTML/CSS/JS zip."],
+      rules: ["Individual or group of two can participate.", "Use only HTML and CSS (no libraries or frameworks).", "Devices and tools will be provided by organizers.","There will be 3 round each with eliminations.","Judges decesions will be final."],
       prize: "₹ 5,000",
-      contact: [{ name: "Arjun", phone: "7776665554" }],
+      contact: [{ name: "Nahas", phone: "7736038034" }, { name: "Anzalna", phone: "9072189390" }],
       regFee: "₹ 200"
     },
     
-    102: { id: 102, title: "Capture The Flag", subtitle:"Coding competition" ,date: "Jan 16", time: "2 PM", location: "Lab 3", image: "https://images.unsplash.com/photo-1614064641938-3eeb5218fe84?q=80&w=1974", icon: <Zap />, desc: "Find flaws, secure the bag.", prize: "₹ 3,000", rules: ["Find hidden flags."], contact: [{name: "Dev", phone: "123"}], regFee: "₹ 100" },
-    103: { id: 103, title: "Coding", date: "Jan 16", time: "9 AM", location: "Quadrangle", image: "https://images.unsplash.com/photo-1561144257-e32e8efc6c4f?q=80&w=2070", icon: <Cpu />, desc: "Mechanical athletes.", prize: "₹ 8,000", rules: ["Bots < 5kg."], contact: [{name: "Manu", phone: "123"}], regFee: "₹ 300" },
-    104: { id: 104, title: "Quiz Tech", date: "Jan 17", time: "11 AM", location: "Seminar Hall", image: "https://images.unsplash.com/photo-1606326608606-aa0b62935f2b?q=80&w=2070", icon: <Terminal />, desc: "IT Knowledge test.", prize: "₹ 4,000", rules: ["Teams of 2."], contact: [{name: "Riya", phone: "123"}], regFee: "₹ 200" },
-    201: { id: 201, title: "Valorant", date: "Jan 16", time: "9 AM", location: "Gaming Zone", image: "https://images.unsplash.com/photo-1624138784614-87fd1b6528f8?q=80&w=1933", icon: <Gamepad2 />, desc: "5v5 Shooter.", prize: "₹ 10,000", rules: ["Bring own peripherals."], contact: [{name: "Tom", phone: "123"}], regFee: "₹ 500" },
-    202: { id: 202, title: "Shutter Up", date: "Jan 16", time: "All Day", location: "Campus", image: "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=1964", icon: <Camera />, desc: "Photography.", prize: "₹ 4,000", rules: ["No editing."], contact: [{name: "Sam", phone: "123"}], regFee: "₹ 150" },
-    203: { id: 203, title: "Spot Dance", date: "Jan 17", time: "10 AM", location: "Plaza", image: "https://images.unsplash.com/photo-1545959868-d65272a2948e?q=80&w=2071", icon: <Music />, desc: "Dance battle.", prize: "₹ 5,000", rules: ["3 mins max."], contact: [{name: "Lisa", phone: "123"}], regFee: "₹ 200" },
-    204: { id: 204, title: "Short Film", date: "Jan 17", time: "2 PM", location: "AV Room", image: "https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=2059", icon: <Video />, desc: "Directing.", prize: "₹ 6,000", rules: ["Submit via drive."], contact: [{name: "Ben", phone: "123"}], regFee: "₹ 300" },
+    102: { id: 102, title: "Debugging",date: "Jan 16", time: "10:30 AM", location: "BCA Lab", image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", icon: <Zap />, description: "Find flaws, secure the bag.Fight asgainst time to fix the bugs", prize: "₹ 5,000", rules: ["Individuals or teams of up to two can participate.","The competition will be conducted in 2 rounds.","Electronic gadgets, including laptops, are not allowed inside the competition venue.","Questions are only from C and Cpp.","Any misbehave or cheating will lead to disqaulification of the team.","Judges decesions will be final",], contact: [{name: "Aysha", phone: "6282112238"} ,{ name: "Anngraze" , phone:"7736672724"}], regFee: "₹ 200" },
+    103: { id: 103, title: "Escape Room", date: "Jan 16", time: "2:00 PM", location: "BCA Lab", image: "https://images.unsplash.com/photo-1624357676666-4cca3b657627?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGNvZGluZyUyMHJvb218ZW58MHx8MHx8fDA%3D", icon: <Cpu />, description: "The door is locked, and the source code is broken. To escape, you must solve a trail of cryptic crosswords and hidden logic puzzles that lead deep into the terminal. Success requires more than just a sharp mind—it requires the ability to read, write, and debug your way to freedom. 20 slots. One exit. Can you patch the system before time runs out?.", prize: "₹ 5,000", rules: ["Individuals or teams of up to two can participate.","The Escape Room Competition will be conducted in multiple rounds.","Participants must crack codes and solve puzzles to uncover hidden hints.","Participants should have a basic programming skills (C,Cpp,..)","Devices and resources for the competition will be provided.","Alloted time will be 2-3 hours.","The team that uncovers all hints and escapes first wins the competition.","The second prize will be awarded to the team with the second-fastest escape time."], contact: [{name: "Akhil", phone: "8848250279"},{ name: "Ameen",phone: "9778252117"}], regFee: "₹ 200" },
+    201: { id: 201, title: "E-Football", date: "Jan 16", time: "2 PM", location: "AV Room", image: "https://www.sportspro.com/wp-content/uploads/2024/10/eFootball-HOZ.jpg", icon: <Gamepad2 />, description: "Play .", prize: "₹ 1,500", rules: ["The tournament is held individually (1v1), which means players will compete against each other one-on-one.","All players compete in a knockout format , where each player is eliminated after losing a single match.","The total match time is 6 minutes.","Player condition will be random.","Maximum 32 players allowed."], contact: [{name: "Mahendra", phone: "9778525583"}], regFee: "₹ 50" },
+    202: { id: 202, title: "Treasure Hunt", date: "Jan 16", time: "All Day", location: "Campus", image: "https://images.unsplash.com/photo-1608924066819-930edc42986a?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", icon: <Camera />, description:"Race against time, outsmart the competition, and hunt down the prize! It’s not just a game; it’s a battle of wits. The hunt is on!", prize: "₹ 5,000", rules: ["A team of 2-4 members can participate for the event.","Elimination Round will be present.","Event is limited to 25 teams.","2-4 members are allowed in a team","Judges decesion will be final","The one who solves all the clue gets the prize and tthere is no runner up."], contact: [{name: "Priya", phone: "7907739503"}], regFee: "₹ 400" },
+    203: { id: 203, title: "Dance", date: "Jan 17", time: "10 AM", location: "Plaza", image: dance , icon: <Music />, description: "The Stage is Set. The Spotlight Awaits. Witness the ultimate fusion of athleticism and artistry! Join us for [Name of Event], where the region’s most talented dancers go head-to-head for the top prize. From explosive power moves to breathtaking technical precision, experience the passion and grit of performers who have spent months preparing for this single moment.", prize: "₹ 5,000", rules: ["3 mins max."], contact: [{name: "Vismaya", phone: "9539280934"}], regFee: "₹ 200" },
+    204: { id: 204, title: "5's Football", date: "Jan 16", time: "10:30 Am", location: "College Ground", image: "https://images.unsplash.com/photo-1434648957308-5e6a859697e8?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", icon: <Video />, desc: "Directing.", prize: "₹ 5,000", rules: ["Each team must consist of 5 players on the field.","Teams can have 1 substitute, making a total of 6 players.","Each match will last for 10 Minutes","Matches will begin promptly as per the schedule. Teams arriving late by more than 5 minutes will forfeit the match.","Tied matches go to a penalty shootout (3 kicks per team, followed by sudden death if needed)"], contact: [{name: "Aromal", phone: "7012629742"}], regFee: "₹ 350" },
   };
 
   // Helper arrays for rendering the grid
-  const techIds = [101, 102, 103, 104];
+  const techIds = [101, 102, 103,];
   const nonTechIds = [201, 202, 203, 204];
 
   return (
@@ -79,7 +89,7 @@ const Events = () => {
             <h2 className="text-2xl font-bold uppercase tracking-widest text-gray-200">Main Protocols</h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-24">
-          {[allEvents[1], allEvents[2]].map((event) => (
+          {[allEvents[1], allEvents[2],allEvents[3]].map((event) => (
             <div 
               key={event.id}
               onClick={() => setSelectedEvent(event)}
