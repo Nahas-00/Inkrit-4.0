@@ -79,8 +79,6 @@ const Events = () => {
       <Navbar />
       <div className="fixed inset-0 bg-grid-pattern opacity-20 pointer-events-none"></div>
 
-      <div className='bg-red-500 p-2 text-center text-2xl'>Events are not updated.Will update Soon</div>
-
       <div className="relative z-10 container mx-auto px-4 pt-24">
         
         {/* --- HEADLINERS --- */}
