@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import '../styles/font.css'
 import TrueFocus from './ui/TrueFocus/TrueFocus';
 import RotatingText from './ui/RotatingText/RotatingText';
@@ -113,10 +114,12 @@ const Hero = () => {
         <p className="mt-6 text-sm md:text-lg font-robot text-gray-200 shadow-red-100 max-w-2xl">
           Showcase Your talent and win exciting prizes
         </p>
-        <button className="mt-8 px-8 py-3 bg-red-600 font-robot text-gray-200 font-semibold rounded-full hover:scale-105 transition-transform relative neon-btn z-2">
-          Explore Events
-        </button>
 
+        <Link to='/events'>
+          <button className="mt-8 px-8 py-3 bg-red-600 font-robot text-gray-200 font-semibold rounded-full hover:scale-105 transition-transform relative neon-btn z-2">
+            Explore Events
+          </button>
+        </Link>
 
          <div className="mt-12 overflow-hidden flex flex-row gap-1 z-4">
             <RotatingText
