@@ -28,7 +28,7 @@ const Events = () => {
       rules: ["Team should be of 2-4 members.", "Bring your own laptops and chargers.", "Participants will be given a set of problem statements from which they are required to select one statement and build a hardware/ software prototype.", "Hackaton will be conducted in two rounds where in the first round participants should submit an abstract on their product and for the second round the participants are required to submit their final product along with a presentation","WIFI and Restroom Facilities will be provided."," Participants are required to submit the abstract and an evaluation will be conducted .","Only the first 20 registered teams will be accepted. Please register early to secure your spot."],
       prize: "₹ 20,000",
       contact: [{ name: "Safa", phone: "9895344188" }, { name: "Nadiya", phone: "9207511320" }],
-      regFee: "₹ 500 / Team",regLink:"https://docs.google.com/forms/d/e/1FAIpQLSdz1KBS0OH5XYzlbkeJ4UMt8jCBYWU5A_t0mv5_KrlEeYpx-w/viewform?usp=header"
+      regFee: "₹ 400 / Team",regLink:"https://docs.google.com/forms/d/e/1FAIpQLSdz1KBS0OH5XYzlbkeJ4UMt8jCBYWU5A_t0mv5_KrlEeYpx-w/viewform?usp=header"
     },
     2: { 
       id: 2, title: "BATTLE OF BANDS", subtitle: "LIVE MUSIC CLASH", date: "Jan 17", time: "02:00 PM", location: "Auditorium", 
